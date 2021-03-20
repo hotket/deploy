@@ -1,5 +1,18 @@
 # 极光面板
+极光面板支持的转发方式和功能更多，支持的端口功能包括iptables，socat，gost，ehco，v2ray，brook，iperf，wstunnel，shadowsocks，tinyPortMapper，Prometheus Node Exporter。
 
+我们还是在腾讯云轻量应用服务器上进行安装，部署方式也是docker，这里参照前面部分安装即可。
+
+部署极光面板：
+
+docker-compose一键部署启动：
+
+wget https://raw.githubusercontent.com/Aurora-Admin-Panel/deploy/main/docker-compose.yml -O docker-compose.yml
+docker-compose up -d
+
+创建管理员用户：
+
+docker-compose exec backend python app/initial_data.py
 ## How to run
 ```shell
 docker-compose up -d
